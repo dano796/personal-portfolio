@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           disabled={isSending}
-          className="w-full border-2 border-neutral-400 rounded-lg text-center py-2.5 px-6 mb-7 font-semibold disabled:text-gray-400 disabled:cursor-not-allowed"
+          className="w-full border-2 border-neutral-400 rounded-lg text-center py-2.5 px-6 mb-7 font-semibold"
         >
           {isSending ? "Sending message..." : "Send"}
         </motion.button>
