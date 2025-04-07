@@ -34,7 +34,7 @@ const Education: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 text-lg font-medium">
+              <h6 className="mb-2 text-[17px] font-semibold">
                 {education.role} -{" "}
                 <span className="text-purple-400">{education.company}</span>
               </h6>

@@ -52,7 +52,9 @@ const Projects: React.FC = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               <div className="flex items-center">
-                <h6 className="mb-2 text-lg font-semibold">{project.title}</h6>
+                <h6 className="mb-2 text-[17px] font-semibold">
+                  {project.title}
+                </h6>
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -69,8 +71,7 @@ const Projects: React.FC = () => {
                 {project.technologies.map((tech: string, index: number) => (
                   <span
                     key={index}
-                    className="mr-2 mt-2 rounded bg-neutral-900
-                                px-2 py-1 text-[14px] font-medium text-purple-500 mb-5"
+                    className="mr-2 mt-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500 mb-5"
                   >
                     {tech}
                   </span>

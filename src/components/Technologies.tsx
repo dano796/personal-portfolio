@@ -1,5 +1,18 @@
 import { motion } from "framer-motion";
 
+// Interfaz para un ícono
+interface TechnologyIcon {
+  src: string;
+  duration: number;
+}
+
+// Interfaz para una sección de tecnologías (multiples íconos)
+interface TechnologySection {
+  title: string;
+  direction: number;
+  icons: TechnologyIcon[];
+}
+
 const iconVariants = (duration: number) => ({
   initial: { y: -10 },
   animate: {
@@ -13,6 +26,117 @@ const iconVariants = (duration: number) => ({
   },
 });
 
+const technologySections: TechnologySection[] = [
+  {
+    title: "Frontend",
+    direction: 100,
+    icons: [
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        duration: 3.25,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        duration: 3.25,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        duration: 4.25,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        duration: 2.75,
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    direction: -100,
+    icons: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg",
+        duration: 3.5,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg",
+        duration: 4,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/devicon/icons/python/python-original.svg",
+        duration: 3.5,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        duration: 3.5,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+        duration: 4.25,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/npm/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+        duration: 4.25,
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    direction: 100,
+    icons: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg",
+        duration: 3.25,
+      },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+        duration: 2.75,
+      },
+    ],
+  },
+];
+
+// Componente para un ícono
+const TechnologyIcon: React.FC<{ icon: TechnologyIcon }> = ({ icon }) => (
+  <motion.div
+    variants={iconVariants(icon.duration)}
+    whileHover={{ scale: 1.1 }}
+    initial="initial"
+    animate="animate"
+    className="p-4"
+  >
+    <img src={icon.src} className="w-14 h-14" alt="Technology Icon" />
+  </motion.div>
+);
+
+// Componente para una sección de tecnologías
+const TechnologySection: React.FC<{ section: TechnologySection }> = ({
+  section,
+}) => (
+  <div className="mb-12">
+    <motion.h3
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      initial={{ opacity: 0, x: section.direction }}
+      transition={{ duration: 0.5 }}
+      className="text-center text-xl mb-6 font-medium text-neutral-300"
+    >
+      {section.title}
+    </motion.h3>
+    <motion.div
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      initial={{ opacity: 0, x: section.direction }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-wrap items-center justify-center gap-4"
+    >
+      {section.icons.map((icon, index) => (
+        <TechnologyIcon key={index} icon={icon} />
+      ))}
+    </motion.div>
+  </div>
+);
+
+// Componente principal
 const Technologies: React.FC = () => {
   return (
     <div className="border-b border-neutral-900 pb-24">
@@ -26,176 +150,9 @@ const Technologies: React.FC = () => {
         Technologies
       </motion.h2>
 
-      {/* Frontend Section */}
-      <div className="mb-12">
-        <motion.h3
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-2xl mb-6 font-medium text-neutral-300"
-        >
-          Frontend
-        </motion.h3>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <motion.div
-            variants={iconVariants(3.25)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(4.25)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(2.75)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Backend Section */}
-      <div className="mb-12">
-        <motion.h3
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-2xl mb-6 font-medium text-neutral-300"
-        >
-          Backend
-        </motion.h3>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <motion.div
-            variants={iconVariants(3.5)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/devicon/icons/java/java-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(4)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/devicon/icons/csharp/csharp-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(3.5)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/devicon/icons/python/python-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(4.25)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Tools Section */}
-      <div>
-        <motion.h3
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-2xl mb-6 font-medium text-neutral-300"
-        >
-          Tools
-        </motion.h3>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <motion.div
-            variants={iconVariants(3.25)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/npm/devicon/icons/git/git-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-          <motion.div
-            variants={iconVariants(2.75)}
-            whileHover={{ scale: 1.1 }}
-            initial="initial"
-            animate="animate"
-            className="p-4"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-              className="w-16 h-16"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
+      {technologySections.map((section, index) => (
+        <TechnologySection key={index} section={section} />
+      ))}
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { CONTACT } from "../constants";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
@@ -12,7 +11,6 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSending(true);
 
-    // Check if environment variables are defined
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -41,8 +39,8 @@ const Contact: React.FC = () => {
         console.log("Email sent successfully:", response);
         setMessageSent(true);
         setIsSending(false);
-        if (form.current) form.current.reset(); // Clear the form
-        setTimeout(() => setMessageSent(false), 3000); // Hide message after 3 seconds
+        if (form.current) form.current.reset();
+        setTimeout(() => setMessageSent(false), 3000);
       },
       (error) => {
         console.error("Failed to send email:", error);
@@ -77,7 +75,6 @@ const Contact: React.FC = () => {
         Want to work together or connect? Feel free to reach me out!
       </motion.p>
 
-      {/* Contact Form */}
       <motion.form
         ref={form}
         onSubmit={sendEmail}
@@ -93,7 +90,7 @@ const Contact: React.FC = () => {
           </label>
           <input
             type="text"
-            name="name" // Changed from "user_name" to "name"
+            name="name"
             required
             className="w-full p-3 bg-neutral-900 border border-neutral-400 rounded-lg text-white focus:outline-none focus:border-0 focus:ring-2 focus:ring-purple-500"
           />
@@ -104,7 +101,7 @@ const Contact: React.FC = () => {
           </label>
           <input
             type="email"
-            name="email" // Changed from "user_email" to "email"
+            name="email"
             required
             className="w-full p-3 bg-neutral-900 border border-neutral-400 rounded-lg text-white focus:outline-none focus:border-0 focus:ring-2 focus:ring-purple-500"
           />
@@ -114,7 +111,7 @@ const Contact: React.FC = () => {
             Message
           </label>
           <textarea
-            name="message" // Already matches, no change needed
+            name="message"
             required
             rows={4}
             className="w-full p-3 bg-neutral-900 border border-neutral-400 rounded-lg focus:outline-none focus:border-0 focus:ring-2 focus:ring-purple-500"
@@ -125,7 +122,7 @@ const Contact: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           disabled={isSending}
-          className="w-full border-2 border-neutral-400 rounded-lg text-center py-2.5 px-6 mb-7 font-semibold"
+          className="w-full border-2 border-neutral-400 rounded-lg text-center py-2.5 px-6 mb-7 font-semibold hover:border-purple-500 focus:border-purple-800"
         >
           {isSending ? "Sending message..." : "Send"}
         </motion.button>
@@ -133,32 +130,12 @@ const Contact: React.FC = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mt-4 font-medium text-green-400 text-center"
+            className="mt-4 font-semibold text-green-400 text-center"
           >
             Message sent!
           </motion.p>
         )}
       </motion.form>
-
-      {/* Additional Contact Info */}
-      <div className="text-center mt-12">
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          initial={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
-          className="my-4 text-gray-300"
-        >
-          {CONTACT.address}
-        </motion.p>
-        <a
-          href="mailto:ortizdaniel796@gmail.com"
-          className="border-b text-gray-300 hover:text-purple-500"
-        >
-          {CONTACT.email}
-        </a>
-        <p className="my-16 text-gray-300">{CONTACT.copyright}</p>
-      </div>
     </div>
   );
 };

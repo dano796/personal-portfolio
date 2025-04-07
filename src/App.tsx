@@ -5,6 +5,8 @@ import Technologies from "./components/Technologies";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Certificates from "./components/Certificates";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -22,7 +24,9 @@ const App: React.FC = () => {
         <Technologies />
         <Education />
         <Projects />
+        <Certificates />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
