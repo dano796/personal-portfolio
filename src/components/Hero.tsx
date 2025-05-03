@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import { HERO_CONTENT } from "../constants";
+import { useState } from "react";
 
 const Hero: React.FC = () => {
+  const [showPdfPreview, setShowPdfPreview] = useState(false);
+
+  const viewPDF = () => {
+    setShowPdfPreview(true);
+  };
+
+  const closePdfPreview = () => {
+    setShowPdfPreview(false);
+  };
+
   return (
     <div className="border-b border-neutral-900 xl:mx-16 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
@@ -35,10 +46,8 @@ const Hero: React.FC = () => {
             >
               {HERO_CONTENT}
             </motion.p>
-            <motion.a
-              href="https://drive.google.com/file/d/1YfEtKCYTyscA13m6lkctGl6aF-JKtcs2/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={viewPDF}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               initial={{ opacity: 0, x: -100 }}
@@ -54,7 +63,7 @@ const Hero: React.FC = () => {
               className="border-2 border-neutral-400 rounded-full text-center py-2.5 px-6 mb-7 text-lg font-semibold text-neutral-300"
             >
               View CV
-            </motion.a>
+            </motion.button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
@@ -75,6 +84,33 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {showPdfPreview && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={closePdfPreview}
+            className="fixed top-4 right-4 p-2 px-4 rounded-md hover:bg-neutral-700 bg-neutral-800 text-neutral-200 hover:text-white z-[60] font-medium"
+          >
+            Cerrar
+          </motion.button>
+          <div className="w-full max-w-5xl flex flex-col relative h-[90vh]">
+            <div className="w-full h-full">
+              <iframe
+                src="https://drive.google.com/file/d/1O-AnbkJScxuMzniomhyzUmnACOh9noBs/preview"
+                className="w-full h-full rounded-lg"
+                title="CV Daniel Ortiz"
+                allow="autoplay"
+                style={{
+                  transform: "scale(0.9)",
+                  transformOrigin: "center center",
+                }}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
