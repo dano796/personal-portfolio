@@ -1,3 +1,11 @@
+import project1 from "../assets/projects/project-1.webp";
+import project2 from "../assets/projects/project-2.webp";
+import project3 from "../assets/projects/project-3.webp";
+import project4 from "../assets/projects/project-4.webp";
+import project5 from "../assets/projects/project-5.webp";
+import project6 from "../assets/projects/project-6.webp";
+import project7 from "../assets/projects/project-7.webp";
+
 export interface EducationItem {
   year: string;
   role: string;
@@ -54,7 +62,7 @@ export const EDUCATION: EducationItem[] = [
 export const PROJECTS: ProjectItem[] = [
   {
     title: "Automated Deployment of a Playable Piano",
-    image: "/src/assets/projects/project-1.webp",
+    image: project1,
     description:
       "Automated deployment a playable piano using Git, Terraform, Docker, and AWS. This project demonstrates my ability to leverage modern DevOps practices and tools to streamline the deployment process.",
     technologies: ["AWS", "Dockerfile", "Terraform"],
@@ -62,7 +70,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     title: "Virtual Menu App",
-    image: "/src/assets/projects/project-2.webp",
+    image: project2,
     description:
       "Virtual menu app for a restaurant, developed as an application in Android Studio. It allows users to browse the menu, view detailed descriptions of dishes, place orders, make reservations, see the restaurant's location and rate their experience. The project highlights my skills in mobile app development and my understanding of user experience design.",
     technologies: ["Java", "Android Studio"],
@@ -70,14 +78,14 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     title: "Portfolio Website",
-    image: "/src/assets/projects/project-3.webp",
+    image: project3,
     description: "Personal portfolio showcasing my experience.",
     technologies: ["TypeScript", "React", "Tailwind CSS"],
     githubLink: "https://github.com/dano796/personal-portfolio",
   },
   {
     title: "PriceHome",
-    image: "/src/assets/projects/project-4.webp",
+    image: project4,
     description:
       "PriceHome is a web app designed to provide quick, accurate estimates of property market value, whether for rental or sale. By leveraging a predictive model trained on data from the Colombian real estate market, PriceHome delivers contextually relevant valuations that reflect current market trends.",
     technologies: ["Python", "React", "FastAPI"],
@@ -85,7 +93,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     title: "Full-Stack Veterinary Project",
-    image: "/src/assets/projects/project-5.webp",
+    image: project5,
     description:
       "Full Stack project for a web app that provides home veterinary services. The app allows users to register, manage pet information, book appointments or exams, make payments, and more.",
     technologies: ["React", "Tailwind CSS", "Express"],
@@ -93,7 +101,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     title: "All In One Fitness App",
-    image: "/src/assets/projects/project-6.webp",
+    image: project6,
     description:
       "All In One Fitness is a web application designed to help users manage their healthy habits and fitness journey. It offers features like calorie and macronutrient tracking, exercise and weight logging for strength training, hydration tracking, a calorie calculator, a one-rep max calculator and more.",
     technologies: ["React", "Tailwind CSS", "Express"],
@@ -101,7 +109,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     title: "Coffee Bean Maturity Classification using CNN",
-    image: "/src/assets/projects/project-7.webp",
+    image: project7,
     description:
       "Machine learning project implementing Convolutional Neural Networks with PyTorch to classify coffee bean maturity levels from images. The model identifies five maturity stages (green, semi-ripe, ripe, overripe, and dry) achieving 93.44% accuracy with the optimized version.",
     technologies: ["Python", "PyTorch", "Computer Vision"],
