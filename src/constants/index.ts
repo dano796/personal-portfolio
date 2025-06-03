@@ -57,7 +57,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "https://i.postimg.cc/BQFfcpKH/project-1.png",
     description:
       "Automated deployment a playable piano using Git, Terraform, Docker, and AWS. This project demonstrates my ability to leverage modern DevOps practices and tools to streamline the deployment process.",
-    technologies: ["AWS", "Terraform", "Dockerfile"],
+    technologies: ["AWS", "Dockerfile", "Terraform"],
     githubLink: "https://github.com/dano796/virtual-piano-iac-deployment",
   },
   {
@@ -65,14 +65,14 @@ export const PROJECTS: ProjectItem[] = [
     image: "https://i.postimg.cc/3xH5LGX6/project-2.png",
     description:
       "Virtual menu app for a restaurant, developed as an application in Android Studio. It allows users to browse the menu, view detailed descriptions of dishes, place orders, make reservations, see the restaurant's location and rate their experience. The project highlights my skills in mobile app development and my understanding of user experience design.",
-    technologies: ["Android Studio", "Java", "XML"],
+    technologies: ["Java", "Android Studio"],
     githubLink: "https://github.com/dano796/voraz-restaurante-app",
   },
   {
     title: "Portfolio Website",
     image: "https://i.postimg.cc/Ls9dSM03/project-3.png",
     description: "Personal portfolio showcasing my experience.",
-    technologies: ["React", "Tailwind", "TypeScript"],
+    technologies: ["TypeScript", "React", "Tailwind CSS"],
     githubLink: "https://github.com/dano796/personal-portfolio",
   },
   {
@@ -80,7 +80,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "https://i.postimg.cc/v8kdVkcG/project-4.png",
     description:
       "PriceHome is a web app designed to provide quick, accurate estimates of property market value, whether for rental or sale. By leveraging a predictive model trained on data from the Colombian real estate market, PriceHome delivers contextually relevant valuations that reflect current market trends.",
-    technologies: ["React", "Python", "FastAPI"],
+    technologies: ["Python", "React", "FastAPI"],
     githubLink: "https://github.com/dano796/price-home",
   },
   {
@@ -88,7 +88,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "https://i.postimg.cc/Bb2r2GLQ/project-5.png",
     description:
       "Full Stack project for a web app that provides home veterinary services. The app allows users to register, manage pet information, book appointments or exams, make payments, and more.",
-    technologies: ["React", "Node.js", "Express"],
+    technologies: ["React", "Tailwind CSS", "Express"],
     githubLink: "https://github.com/dano796/full-stack-veterinary",
   },
   {
@@ -96,8 +96,16 @@ export const PROJECTS: ProjectItem[] = [
     image: "https://i.postimg.cc/2ydtVFM1/project-6.png",
     description:
       "All In One Fitness is a web application designed to help users manage their healthy habits and fitness journey. It offers features like calorie and macronutrient tracking, exercise and weight logging for strength training, hydration tracking, a calorie calculator, a one-rep max calculator and more.",
-    technologies: ["React", "Node.js", "Express"],
+    technologies: ["React", "Tailwind CSS", "Express"],
     githubLink: "https://github.com/dano796/all-in-one-fitness-app",
+  },
+  {
+    title: "Coffee Bean Maturity Classification using CNN",
+    image: "https://i.postimg.cc/nzz1VxDQ/project-7.webp",
+    description:
+      "Machine learning project implementing Convolutional Neural Networks with PyTorch to classify coffee bean maturity levels from images. The model identifies five maturity stages (green, semi-ripe, ripe, overripe, and dry) achieving 93.44% accuracy with the optimized version.",
+    technologies: ["Python", "PyTorch", "Computer Vision"],
+    githubLink: "https://github.com/dano796/clasificacion-madurez-cafe",
   },
 ];
 

@@ -65,10 +65,11 @@ const technologySections: TechnologySection[] = [
         src: "https://cdn.jsdelivr.net/npm/devicon/icons/python/python-original.svg",
         duration: 3.5,
       },
+      /*
       {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
         duration: 3.5,
-      },
+      },*/
       {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
         duration: 4.25,
@@ -91,6 +92,10 @@ const technologySections: TechnologySection[] = [
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
         duration: 2.75,
       },
+      {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
+        duration: 3.5,
+      }
     ],
   },
 ];

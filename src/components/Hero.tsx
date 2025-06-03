@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
                 transition: { duration: 0.05 },
                 scale: 1.015,
               }}
-              src={"https://i.postimg.cc/HskzthMh/daniel-Ortiz-Profile.png"}
+              src={"https://i.postimg.cc/FHX5YWGK/daniel-Ortiz-Profile.webp"}
               alt="Ilustración de Daniel Ortiz"
             />
           </div>
