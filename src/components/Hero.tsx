@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { HERO_CONTENT } from "../constants";
 import { useState } from "react";
+import danielOrtizProfile from "../assets/danielOrtizProfile.webp";
 
 const Hero: React.FC = () => {
   const [showPdfPreview, setShowPdfPreview] = useState(false);
@@ -78,7 +79,7 @@ const Hero: React.FC = () => {
                 transition: { duration: 0.05 },
                 scale: 1.015,
               }}
-              src={"https://i.postimg.cc/FHX5YWGK/daniel-Ortiz-Profile.webp"}
+              src={danielOrtizProfile}
               alt="Ilustración de Daniel Ortiz"
             />
           </div>
