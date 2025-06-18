@@ -157,4 +157,14 @@ export const CERTIFICATIONS: CertificationItem[] = [
       "https://images.credly.com/images/4b68a030-53d0-414b-be57-b1837bc3b3e6/image.png",
     skills: ["AWS Cloud", "AI"],
   },
+  {
+    title: "MySQL Implementation Certified Associate",
+    issuer: "Oracle",
+    date: "Jun 2025",
+    credlyLink:
+      "https://catalog-education.oracle.com/ords/certview/sharebadge?id=BFA3F87360CDAC45CB643C3337254D2AC488C2B33E5BA718A337DB36DC3A5CD4",
+    badgeImage:
+      "https://brm-workforce.oracle.com/pdf/certview/images/MYSQLIMPOCA.png",
+    skills: ["MySQL Implementation"],
+  },
 ];
