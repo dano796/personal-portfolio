@@ -144,7 +144,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     credlyLink:
       "https://www.credly.com/badges/325a6fb3-6170-4047-a502-92df9c0c0fe3/public_url",
     badgeImage:
-      "https://images.credly.com/size/680x680/images/ec621e2a-c8f0-4459-806c-ae11829d372a/image.png",
+      "https://images.credly.com/size/680x680/images/7cf036b0-c609-4378-a7be-9969e1dea7ab/blob",
     skills: ["AWS Core Services"],
   },
   {
@@ -154,7 +154,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     credlyLink:
       "https://www.credly.com/badges/5e95bc84-052f-44bd-a846-3d40541d5c8e/public_url",
     badgeImage:
-      "https://images.credly.com/images/4b68a030-53d0-414b-be57-b1837bc3b3e6/image.png",
+      "https://images.credly.com/size/680x680/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob",
     skills: ["AWS Cloud", "AI"],
   },
   {
