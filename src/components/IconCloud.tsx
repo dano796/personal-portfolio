@@ -1,35 +1,28 @@
-/*
 import React, { useEffect, useState } from "react";
 import { Cloud, renderSimpleIcon, fetchSimpleIcons } from "react-icon-cloud";
 import { motion } from "framer-motion";
 
+// Created using https://github.com/teaguestockwell/react-icon-cloud.git
+
 const iconSlugs = [
-  // Frontend
   "javascript",
   "typescript",
-  "react",
-  "tailwindcss",
-
-  // Backend
   // "java",
   // "csharp",
   "python",
-  "nodedotjs",
+  "postgresql",
   "mysql",
+  "supabase",
   // "microsoftsqlserver",
-
-  // Tools
+  "react",
+  "tailwindcss",
   "git",
-  "figma",
-
-  // Additional icons
-  "css3",
-  "html5",
   "github",
-  "aws",
-  "vercel",
-  "vscode",
-  "vite",
+  "figma",
+  "trello",
+  "html5",
+  "css3",
+  "docker",
 ];
 
 const IconCloud: React.FC = () => {
@@ -56,8 +49,17 @@ const IconCloud: React.FC = () => {
       viewport={{ once: true }}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex justify-center items-center w-full"
+      className="border-b border-neutral-800 pb-4 flex flex-col justify-center items-center w-full"
     >
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+        className="mt-20 mb-5 text-center text-4xl font-medium text-neutral-300"
+      >
+        Technologies
+      </motion.h2>
       <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] flex justify-center items-center">
         {icons ? (
           <Cloud
@@ -65,11 +67,17 @@ const IconCloud: React.FC = () => {
               depth: 0.5,
               imageScale: 1,
               bgColor: "transparent",
-              activeCursor: "default",
-              noSelect: true,
+              activeCursor: "grab",
+              noSelect: false,
               outlineMethod: "none",
-              zoomMax: 1.1,
-              zoomMin: 0.9,
+              dragControl: true,
+              dragThreshold: 15,
+              initial: [0.1, -0.1],
+              freezeActive: false,
+              maxSpeed: 0.01,
+              minSpeed: 0.005,
+              decel: 0.95,
+              wheelZoom: false,
             }}
           >
             {icons}
@@ -86,7 +94,7 @@ const IconCloud: React.FC = () => {
             }}
             className="text-purple-400 text-xl"
           >
-            Loading...
+            Loading Icon Cloud...
           </motion.p>
         )}
       </div>
@@ -95,4 +103,3 @@ const IconCloud: React.FC = () => {
 };
 
 export default IconCloud;
-*/

@@ -95,7 +95,7 @@ const technologySections: TechnologySection[] = [
       {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
         duration: 3.5,
-      }
+      },
     ],
   },
 ];
@@ -144,7 +144,7 @@ const TechnologySection: React.FC<{ section: TechnologySection }> = ({
 // Componente principal
 const Technologies: React.FC = () => {
   return (
-    <div className="border-b border-neutral-900 pb-24">
+    <div className="border-b border-neutral-800 pb-24">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

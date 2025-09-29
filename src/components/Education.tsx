@@ -3,7 +3,7 @@ import { EDUCATION, EducationItem } from "../constants";
 
 const Education: React.FC = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="border-b border-neutral-800 pb-4">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
