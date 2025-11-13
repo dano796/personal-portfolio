@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
             >
               <motion.img
                 whileHover={{
-                  transition: { duration: 0.05 },
+                  transition: { duration: 0.1 },
                   scale: 1.1,
                 }}
                 src={project.image}

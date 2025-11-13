@@ -5,6 +5,7 @@ import project4 from "../assets/projects/project-4.webp";
 import project5 from "../assets/projects/project-5.webp";
 import project6 from "../assets/projects/project-6.webp";
 import project7 from "../assets/projects/project-7.webp";
+import project8 from "../assets/projects/project-8.webp";
 
 export interface EducationItem {
   year: string;
@@ -114,6 +115,14 @@ export const PROJECTS: ProjectItem[] = [
       "Machine learning project implementing Convolutional Neural Networks with PyTorch to classify coffee bean maturity levels from images. The model identifies five maturity stages (green, semi-ripe, ripe, overripe, and dry) achieving 93.44% accuracy with the optimized version.",
     technologies: ["Python", "PyTorch", "Computer Vision"],
     githubLink: "https://github.com/dano796/clasificacion-madurez-cafe",
+  },
+  {
+    title: "Inventory Management System for UPB Art Collection",
+    image: project8,
+    description:
+      "Web application for the Central Library at Universidad Pontificia Bolivariana that centralizes the management and tracking of the university's art collection.",
+    technologies: ["Angular", "TypeScript", "Supabase"],
+    githubLink: "https://inventario-patrimonio-artistico-upb.netlify.app/",
   },
 ];
 
