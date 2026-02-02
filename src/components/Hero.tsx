@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HERO_CONTENT } from "../constants";
+import { CV_URL, HERO_CONTENT } from "../constants";
 import { useState } from "react";
 import danielOrtizProfile from "../assets/danielOrtizProfile.webp";
 
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
           <div className="w-full max-w-5xl flex flex-col relative h-[90vh]">
             <div className="w-full h-full">
               <iframe
-                src="https://drive.google.com/file/d/1O-AnbkJScxuMzniomhyzUmnACOh9noBs/preview"
+                src={CV_URL}
                 className="w-full h-full rounded-lg"
                 title="CV Daniel Ortiz"
                 allow="autoplay"

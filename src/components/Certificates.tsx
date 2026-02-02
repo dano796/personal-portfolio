@@ -11,7 +11,7 @@ const Certifications: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-4xl font-medium"
       >
-        Certifications
+        Certifications & Badges
       </motion.h2>
       <div className="flex justify-center">
         <div className="max-w-6xl mb-12">

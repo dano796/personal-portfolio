@@ -51,7 +51,7 @@ const About: React.FC = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 text-[17px] max-w-xl py-6 tracking-normal">
+            <p className="my-2 text-[17px] max-w-xl py-6 tracking-normal whitespace-pre-line">
               {ABOUT_TEXT}
             </p>
           </div>

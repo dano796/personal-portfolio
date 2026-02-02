@@ -6,6 +6,7 @@ import project5 from "../assets/projects/project-5.webp";
 import project6 from "../assets/projects/project-6.webp";
 import project7 from "../assets/projects/project-7.webp";
 import project8 from "../assets/projects/project-8.webp";
+import project9 from "../assets/projects/project-9.webp";
 
 export interface EducationItem {
   year: string;
@@ -37,16 +38,23 @@ export interface CertificationItem {
   skills: string[];
 }
 
-export const HERO_CONTENT: string = `Computer Science Student at Universidad Pontificia Bolivariana, currently in my fifth semester. People who know me describe me as a organized, serious, and responsible person, and as someone who maintains excellent interpersonal relationships. I demonstrate a positive attitude towards completing my tasks and find it easy to collaborate with others. I am open to new challenges, constantly seeking opportunities to learn and improve. I always strive for excellence in every aspect of my life.`;
+export const CV_URL: string =
+  "https://drive.google.com/file/d/1n5urswkG7qNEiIJX9unNdRZSwshQGR3f/preview";
 
-export const ABOUT_TEXT: string = `I consider myself a dedicated and versatile student. Throughout my studies, I have worked with multiple programming languages, including Java, JavaScript, TypeScript, C# and Python, as well as technologies like Git, React, Tailwind CSS, Figma and Microsoft SQL Server. This has allowed me to develop a strong foundation in both backend and frontend development, and I continue to deepen my skills as I tackle new projects. My journey began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. Outside of my career, I enjoy exercising and exploring new technologies.`;
+export const HERO_CONTENT: string = `Computer Science student (7th semester) at Universidad Pontificia Bolivariana, building bridge solutions between software development and data science. Working on projects that combine full-stack development, data analysis, and machine learning to transform data into functional, scalable, and impactful software solutions.`;
+
+export const ABOUT_TEXT: string = `Throughout my academic journey, I have worked with multiple programming languages, including Java, JavaScript, TypeScript, Python, and SQL, along with tools and technologies such as Git, GitHub, React, Tailwind CSS, Supabase, Figma, and AWS. This experience has allowed me to build a solid foundation in both frontend and backend development, while progressively integrating data analysis and machine learning into my projects.
+
+My interest in tech began with a strong curiosity about how systems work and has evolved into a continuous pursuit of learning and problem-solving through software and data-driven solutions.
+
+Outside of my professional interests, I value maintaining an active lifestyle through strength training and calisthenics, while staying up to date with new tools and trends in the tech ecosystem.`;
 
 export const EDUCATION: EducationItem[] = [
   {
     year: "2023 - 2027",
     role: "Ingeniería de Sistemas e Informática",
     company: "Universidad Pontifica Bolivariana",
-    description: `Currently pursuing a degree in Systems and Computer Engineering at Universidad Pontificia Bolivariana. Studying a wide range of subjects including Artificial Intelligence and Operating Systems. Participating in extracurricular activities and projects to gain practical experience in the field.`,
+    description: `Currently pursuing a degree in Systems and Computer Engineering at Universidad Pontificia Bolivariana. Studying a wide range of subjects including AI and Cybersecurity. Participating in extracurricular activities and projects to gain practical experience.`,
   },
   {
     year: "2017 - 2022",
@@ -124,11 +132,19 @@ export const PROJECTS: ProjectItem[] = [
     technologies: ["Angular", "TypeScript", "Supabase"],
     githubLink: "https://inventario-patrimonio-artistico-upb.netlify.app/",
   },
+  {
+    title: "BiteLearn",
+    image: project9,
+    description:
+      "Web application for learning concepts through bite-sized lessons. Users can access concise educational content on various topics and create custom lesson plans leveraging AI.",
+    technologies: ["React", "Supabase", "NestJS"],
+    githubLink: "",
+  },
 ];
 
 export const CONTACT: ContactInfo = {
   address: "Medellín, Colombia",
-  copyright: "Copyright © 2025 Daniel Ortiz.",
+  copyright: "Copyright © 2026 Daniel Ortiz Aristizábal.",
 };
 
 export const CERTIFICATIONS: CertificationItem[] = [
@@ -175,5 +191,15 @@ export const CERTIFICATIONS: CertificationItem[] = [
     badgeImage:
       "https://brm-workforce.oracle.com/pdf/certview/images/MYSQLIMPOCA.png",
     skills: ["MySQL Implementation"],
+  },
+  {
+    title: "Databricks Fundamentals",
+    issuer: "Databricks",
+    date: "Jan 2026",
+    credlyLink:
+      "https://credentials.databricks.com/d846041d-d62c-4b7b-8722-0c2414fdcf88#acc.7x695DWQ",
+    badgeImage:
+      "https://www.databricks.com/sites/default/files/2021/12/lakehouse-fundamentals.png",
+    skills: ["Databricks Lakehouse"],
   },
 ];
