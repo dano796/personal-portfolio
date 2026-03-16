@@ -1,12 +1,13 @@
 import project1 from "../assets/projects/project-1.webp";
 import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
+// import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 import project5 from "../assets/projects/project-5.webp";
 import project6 from "../assets/projects/project-6.webp";
 import project7 from "../assets/projects/project-7.webp";
 import project8 from "../assets/projects/project-8.webp";
-import project9 from "../assets/projects/project-9.webp";
+// import project9 from "../assets/projects/project-9.webp";
+import project10 from "../assets/projects/project-10.webp";
 
 export interface EducationItem {
   year: string;
@@ -85,13 +86,13 @@ export const PROJECTS: ProjectItem[] = [
     technologies: ["Java", "Android Studio"],
     githubLink: "https://github.com/dano796/voraz-restaurante-app",
   },
-  {
+  /*{
     title: "Portfolio Website",
     image: project3,
     description: "Personal portfolio showcasing my experience.",
     technologies: ["TypeScript", "React", "Tailwind CSS"],
     githubLink: "https://github.com/dano796/personal-portfolio",
-  },
+  },*/
   {
     title: "PriceHome",
     image: project4,
@@ -132,13 +133,21 @@ export const PROJECTS: ProjectItem[] = [
     technologies: ["Angular", "TypeScript", "Supabase"],
     githubLink: "https://inventario-patrimonio-artistico-upb.netlify.app/",
   },
-  {
+  /*{
     title: "BiteLearn",
     image: project9,
     description:
       "Web application for learning concepts through bite-sized lessons. Users can access concise educational content on various topics and create custom lesson plans leveraging AI.",
     technologies: ["React", "Supabase", "NestJS"],
     githubLink: "",
+  },*/
+  {
+    title: "W8ly",
+    image: project10,
+    description:
+      "Offline-first web/mobile app for planning and tracking strength training workouts.",
+    technologies: ["React", "Tailwind CSS"],
+    githubLink: "https://github.com/dano796/w8ly",
   },
 ];
 

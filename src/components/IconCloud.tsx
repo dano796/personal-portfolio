@@ -10,11 +10,14 @@ const iconSlugs = [
   // "java",
   // "csharp",
   "python",
+  "sql",
   "postgresql",
   "mysql",
   "supabase",
   // "microsoftsqlserver",
+  "express",
   "react",
+  "angular",
   "tailwindcss",
   "git",
   "github",
@@ -23,6 +26,10 @@ const iconSlugs = [
   "html5",
   "css3",
   "docker",
+  // "aws",
+  "pandas",
+  "numpy",
+  "scikit-learn",
 ];
 
 const IconCloud: React.FC = () => {
@@ -37,7 +44,7 @@ const IconCloud: React.FC = () => {
           aProps: {
             onClick: (e) => e.preventDefault(),
           },
-        })
+        }),
       );
       setIcons(iconElements);
     });
