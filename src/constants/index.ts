@@ -8,6 +8,7 @@ import project7 from "../assets/projects/project-7.webp";
 import project8 from "../assets/projects/project-8.webp";
 // import project9 from "../assets/projects/project-9.webp";
 import project10 from "../assets/projects/project-10.webp";
+import project11 from "../assets/projects/project-11.png";
 
 export interface EducationItem {
   year: string;
@@ -148,6 +149,14 @@ export const PROJECTS: ProjectItem[] = [
       "Offline-first web/mobile app for planning and tracking strength training workouts.",
     technologies: ["React", "Tailwind CSS"],
     githubLink: "https://github.com/dano796/w8ly",
+  },
+  {
+    title: "ReArt",
+    image: project11,
+    description:
+      "Open source collection of animated canvas backgrounds for React, inspired by algorithmic concepts.",
+    technologies: ["React", "TypeScript", "Canvas2D"],
+    githubLink: "https://github.com/dano796/reart",
   },
 ];
 
