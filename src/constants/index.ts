@@ -151,12 +151,12 @@ export const PROJECTS: ProjectItem[] = [
     githubLink: "https://github.com/dano796/w8ly",
   },
   {
-    title: "ReArt",
+    title: "React Algo",
     image: project11,
     description:
       "Open source collection of animated canvas backgrounds for React, inspired by algorithmic concepts.",
     technologies: ["React", "TypeScript", "Canvas2D"],
-    githubLink: "https://github.com/dano796/reart",
+    githubLink: "https://github.com/dano796/react-algo",
   },
 ];
 
