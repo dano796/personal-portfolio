@@ -6,4 +6,9 @@
 
 :root {
   font-family: "Inter", sans-serif;
+  scroll-padding-top: 64px;
+}
+
+html {
+  background-color: #09090b;
 }

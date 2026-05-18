@@ -3,13 +3,13 @@ import { CERTIFICATIONS } from "../constants";
 
 const Certifications: React.FC = () => {
   return (
-    <div className="border-b border-neutral-800 pb-4">
+    <div className="border-b border-neutral-800/50 pb-4">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl font-medium"
+        className="my-20 text-center text-4xl font-semibold text-white"
       >
         Certifications & Badges
       </motion.h2>
@@ -23,7 +23,7 @@ const Certifications: React.FC = () => {
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-neutral-900/30 rounded-xl p-4 flex flex-col items-center w-full sm:w-80 lg:w-72"
+                className="border border-neutral-800/60 bg-neutral-950/40 rounded-lg p-4 flex flex-col items-center w-full sm:w-80 lg:w-72"
               >
                 <motion.div whileHover={{ scale: 1.05 }} className="mb-3">
                   <a
@@ -41,20 +41,20 @@ const Certifications: React.FC = () => {
 
                 <div className="text-center">
                   <div className="flex items-center justify-center">
-                    <h3 className="text-[17px] font-semibold">
+                    <h3 className="text-[17px] font-medium text-neutral-200">
                       {certification.title}
                     </h3>
                   </div>
 
-                  <p className="text-purple-400 font-medium mt-1">
-                    {certification.issuer} - {certification.date}
+                  <p className="text-neutral-500 font-normal text-sm mt-1">
+                    {certification.issuer} · {certification.date}
                   </p>
 
                   <div className="mt-3 flex flex-wrap justify-center">
                     {certification.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="rounded bg-neutral-900 mx-2 px-2 text-sm font-medium text-purple-500 mb-2"
+                        className="border border-neutral-800 rounded mx-1 px-2 py-0.5 text-xs font-normal text-neutral-500 mb-2 inline-block"
                       >
                         {skill}
                       </span>

@@ -1,35 +1,63 @@
+import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="mb-5 flex items-center justify-between">
-      <div className="flex flex-shrink-0 items-center">
-        <img
-          className="mx-2 w-12"
-          src={"https://i.postimg.cc/x8KgqXXJ/daniel-Ortiz-Logo.png"}
-          alt=""
-        />
-      </div>
-      <div className="m-8 mr-0 flex items-center justify-center gap-4 text-2xl text-neutral-100">
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          href="https://www.linkedin.com/in/daniel-ortiza/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-neutral-300 active:text-neutral-400"
+    <nav className="sticky top-0 z-40 w-full border-b border-neutral-800 backdrop-blur-2xll">
+      <div className="max-w-3xl mx-auto px-6 flex items-center justify-between py-4">
+        <NavLink
+          to="/"
+          className="text-base font-bold tracking-tight text-neutral-200 hover:text-white transition-colors duration-200"
         >
-          <FaLinkedin />
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          href="https://github.com/dano796"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-neutral-300 active:text-neutral-400"
-        >
-          <FaGithub />
-        </motion.a>
+          DO
+        </NavLink>
+
+        <div className="flex items-center gap-6">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `text-sm transition-colors duration-200 ${
+                isActive
+                  ? "text-violet-300"
+                  : "text-neutral-400 hover:text-violet-300"
+              }`
+            }
+          >
+            About
+          </NavLink>
+
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              `text-sm transition-colors duration-200 ${
+                isActive
+                  ? "text-violet-300"
+                  : "text-neutral-400 hover:text-violet-300"
+              }`
+            }
+          >
+            Projects
+          </NavLink>
+
+          <span className="w-px h-4 bg-neutral-700" />
+
+          <a
+            href="https://github.com/dano796"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg text-neutral-500 hover:text-violet-300 transition-colors duration-200"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daniel-ortiza/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg text-neutral-500 hover:text-violet-300 transition-colors duration-200"
+          >
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
     </nav>
   );

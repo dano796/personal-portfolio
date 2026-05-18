@@ -56,14 +56,14 @@ const IconCloud: React.FC = () => {
       viewport={{ once: true }}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="border-b border-neutral-800 pb-4 flex flex-col justify-center items-center w-full"
+      className="border-b border-neutral-800/50 pb-4 flex flex-col justify-center items-center w-full"
     >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="mt-20 mb-5 text-center text-4xl font-medium text-neutral-300"
+        className="mt-20 mb-5 text-center text-4xl font-semibold text-white"
       >
         Technologies
       </motion.h2>
@@ -99,7 +99,7 @@ const IconCloud: React.FC = () => {
               repeat: Infinity,
               repeatType: "reverse",
             }}
-            className="text-purple-400 text-xl"
+            className="text-neutral-600 text-sm tracking-widest uppercase"
           >
             Loading Icon Cloud...
           </motion.p>

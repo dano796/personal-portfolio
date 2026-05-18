@@ -75,7 +75,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Automated Deployment of a Playable Piano",
     image: project1,
     description:
-      "Automated deployment a playable piano using Git, Terraform, Docker, and AWS. This project demonstrates my ability to leverage modern DevOps practices and tools to streamline the deployment process.",
+      "IaC pipeline that provisions and deploys a browser-playable piano on AWS using Terraform and Docker.",
     technologies: ["AWS", "Dockerfile", "Terraform"],
     githubLink: "https://github.com/dano796/virtual-piano-iac-deployment",
   },
@@ -83,7 +83,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Virtual Menu App",
     image: project2,
     description:
-      "Virtual menu app for a restaurant, developed as an application in Android Studio. It allows users to browse the menu, view detailed descriptions of dishes, place orders, make reservations, see the restaurant's location and rate their experience. The project highlights my skills in mobile app development and my understanding of user experience design.",
+      "Android app for restaurants with virtual menu, order placement, reservations, and customer ratings.",
     technologies: ["Java", "Android Studio"],
     githubLink: "https://github.com/dano796/voraz-restaurante-app",
   },
@@ -98,7 +98,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "PriceHome",
     image: project4,
     description:
-      "PriceHome is a web app designed to provide quick, accurate estimates of property market value, whether for rental or sale. By leveraging a predictive model trained on data from the Colombian real estate market, PriceHome delivers contextually relevant valuations that reflect current market trends.",
+      "Web app that estimates Colombian real estate prices for rental or sale using a predictive model trained on local market data.",
     technologies: ["Python", "React", "FastAPI"],
     githubLink: "https://github.com/dano796/price-home",
   },
@@ -106,7 +106,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Full-Stack Veterinary Project",
     image: project5,
     description:
-      "Full Stack project for a web app that provides home veterinary services. The app allows users to register, manage pet information, book appointments or exams, make payments, and more.",
+      "Web platform that connects pet owners with home veterinary services, handling everything from profiles to appointments and payments.",
     technologies: ["React", "Tailwind CSS", "Express"],
     githubLink: "https://github.com/dano796/full-stack-veterinary",
   },
@@ -114,7 +114,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "All In One Fitness App",
     image: project6,
     description:
-      "All In One Fitness is a web application designed to help users manage their healthy habits and fitness journey. It offers features like calorie and macronutrient tracking, exercise and weight logging for strength training, hydration tracking, a calorie calculator, a one-rep max calculator and more.",
+      "Full-featured fitness tracker covering everything from macros and nutrition to strength training logs and progress over time.",
     technologies: ["React", "Tailwind CSS", "Express"],
     githubLink: "https://github.com/dano796/all-in-one-fitness-app",
   },
@@ -122,7 +122,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Coffee Bean Maturity Classification using CNN",
     image: project7,
     description:
-      "Machine learning project implementing Convolutional Neural Networks with PyTorch to classify coffee bean maturity levels from images. The model identifies five maturity stages (green, semi-ripe, ripe, overripe, and dry) achieving 93.44% accuracy with the optimized version.",
+      "CNN built with PyTorch that classifies coffee bean maturity across five stages from images, achieving 93.44% accuracy.",
     technologies: ["Python", "PyTorch", "Computer Vision"],
     githubLink: "https://github.com/dano796/clasificacion-madurez-cafe",
   },
@@ -130,7 +130,7 @@ export const PROJECTS: ProjectItem[] = [
     title: "Inventory Management System for UPB Art Collection",
     image: project8,
     description:
-      "Web application for the Central Library at Universidad Pontificia Bolivariana that centralizes the management and tracking of the university's art collection.",
+      "Web app for UPB's Central Library to manage and track the university's art collection.",
     technologies: ["Angular", "TypeScript", "Supabase"],
     githubLink: "https://inventario-patrimonio-artistico-upb.netlify.app/",
   },
@@ -162,7 +162,7 @@ export const PROJECTS: ProjectItem[] = [
 
 export const CONTACT: ContactInfo = {
   address: "Medellín, Colombia",
-  copyright: "Copyright © 2026 Daniel Ortiz Aristizábal.",
+  copyright: "Copyright © 2026 Daniel Ortiz",
 };
 
 export const CERTIFICATIONS: CertificationItem[] = [
