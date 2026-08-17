@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import SectionList from "../components/SectionList";
 import Links from "../components/Links";
-import { CERTIFICATIONS, EDUCATION, PROJECTS } from "../constants";
+import { CERTIFICATIONS, EDUCATION, EXPERIENCE, PROJECTS } from "../constants";
 
 const Home: React.FC = () => (
   <>
@@ -16,10 +16,14 @@ const Home: React.FC = () => (
 
     <SectionList
       title="work"
-      items={EDUCATION.slice(0, 1)}
+      items={EXPERIENCE.slice(0, 3)}
       viewAllHref="/work"
       viewAllText="all work"
     />
+
+    {/* Only the degree — this section lives here alone, with no page of its
+        own, so the school entries never render. */}
+    <SectionList title="education" items={EDUCATION.slice(0, 1)} />
 
     <SectionList
       title="certifications"

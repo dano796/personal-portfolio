@@ -55,6 +55,34 @@ export const INSPIRATION = {
   repo: "https://github.com/nexxeln/nexxel.dev",
 };
 
+/** Newest first — the home page features the first three. */
+export const EXPERIENCE: Item[] = [
+  {
+    title: "Fitally",
+    href: "https://www.fitally.mobile/es",
+    meta: "founder · jul 2026 — present",
+    description:
+      "building a fitness app end to end, from the product decisions down to the stack that runs it.",
+    tags: ["React", "TypeScript", "Express", "Supabase"],
+  },
+  {
+    title: "Cyclops",
+    href: "https://www.cyclopslab.com/",
+    meta: "ai developer (L4) · jun 2026 — present",
+    description:
+      "working across several projects, building web and mobile products backed by ai.",
+    tags: [".NET", "NestJS", "React", "Expo"],
+  },
+  {
+    title: "Nheo",
+    href: "https://nheo.ai/",
+    meta: "full stack engineer · mar 2026 — present",
+    description:
+      "designing and building a multi-tenant outbound calling platform handling parallel dialing, live transcription and metered billing.",
+    tags: ["Next.js", "Express", "PostgreSQL", "AWS"],
+  },
+];
+
 export const EDUCATION: Item[] = [
   {
     title: "Universidad Pontificia Bolivariana",

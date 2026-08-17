@@ -1,5 +1,5 @@
 import SectionList from "../components/SectionList";
-import { EDUCATION } from "../constants";
+import { EXPERIENCE } from "../constants";
 
 const Work: React.FC = () => (
   <>
@@ -8,7 +8,7 @@ const Work: React.FC = () => (
       work
     </h1>
 
-    <SectionList items={EDUCATION} showBorder={false} />
+    <SectionList items={EXPERIENCE} showBorder={false} />
   </>
 );
 
