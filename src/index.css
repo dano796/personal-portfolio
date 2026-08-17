@@ -1,14 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Inter", sans-serif;
-  scroll-padding-top: 64px;
+  color-scheme: dark;
 }
 
 html {
-  background-color: #09090b;
+  background-color: theme("colors.bg");
+}
+
+body {
+  @apply font-mono;
+  background-color: theme("colors.bg");
+  color: theme("colors.fg");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

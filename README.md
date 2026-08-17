@@ -7,4 +7,4 @@ Welcome to my personal portfolio repository! This project showcases my **experie
 - **React**
 - **TypeScript**
 - **Tailwind CSS**
-- **Framer Motion**
+- **Vite**
