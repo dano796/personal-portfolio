@@ -1,10 +1,7 @@
-# Personal Portfolio - Daniel Ortiz
+# portfolio
 
-Welcome to my personal portfolio repository! This project showcases my **experience**, presenting the projects I have had the opportunity to work on during my university career. It serves as a centralized hub to display my skills and projects.
+my personal website.
 
-## Technologies Used
-
-- **React**
-- **TypeScript**
-- **Tailwind CSS**
-- **Vite**
+<samp>
+stack: react, typescript, tailwindcss, vite
+</samp>
