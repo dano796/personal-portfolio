@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -19,22 +20,26 @@ const ScrollToTop: React.FC = () => {
 };
 
 const App: React.FC = () => (
-  <div className="mx-auto flex min-h-screen max-w-4xl flex-col px-5 py-8 antialiased selection:bg-accent/20 selection:text-white sm:px-4">
-    <ScrollToTop />
-    <Navbar />
+  <>
+    <Background />
 
-    <main className="flex-1">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/certifications" element={<Certifications />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </main>
+    <div className="relative z-10 mx-auto flex min-h-screen max-w-4xl flex-col px-5 py-8 antialiased selection:bg-accent/20 selection:text-white sm:px-4">
+      <ScrollToTop />
+      <Navbar />
 
-    <Footer />
-  </div>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
+  </>
 );
 
 export default App;

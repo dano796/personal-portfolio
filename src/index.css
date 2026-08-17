@@ -10,9 +10,9 @@ html {
   background-color: theme("colors.bg");
 }
 
+/* No background-color here: it would cover the fixed AmbientMesh canvas. */
 body {
   @apply font-mono;
-  background-color: theme("colors.bg");
   color: theme("colors.fg");
 }
 
