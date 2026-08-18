@@ -1,64 +1,61 @@
-import { NavLink } from "react-router-dom";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import LocalStatus from "./LocalStatus";
+
+const NAV_ITEMS = [
+  { key: "h", label: "home", to: "/" },
+  { key: "w", label: "work", to: "/work" },
+  { key: "p", label: "projects", to: "/projects" },
+  { key: "c", label: "certs", to: "/certifications" },
+];
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+
+      const active = document.activeElement;
+      if (
+        active instanceof HTMLInputElement ||
+        active instanceof HTMLTextAreaElement ||
+        (active instanceof HTMLElement && active.isContentEditable)
+      ) {
+        return;
+      }
+
+      const match = NAV_ITEMS.find((item) => item.key === event.key.toLowerCase());
+      if (match) navigate(match.to);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
+
+  // Baseline (not center) alignment: the status readout is a smaller font than
+  // the links, so centering their boxes would leave its text sitting high.
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-neutral-800 backdrop-blur-2xll">
-      <div className="max-w-3xl mx-auto px-6 flex items-center justify-between py-4">
-        <NavLink
-          to="/"
-          className="text-base font-bold tracking-tight text-neutral-200 hover:text-white transition-colors duration-200"
-        >
-          DO
-        </NavLink>
-
-        <div className="flex items-center gap-6">
+    <nav className="mb-12 flex items-baseline justify-between gap-4 text-sm">
+      <div className="flex gap-3 sm:gap-4">
+        {NAV_ITEMS.map((item) => (
           <NavLink
-            to="/"
+            key={item.to}
+            to={item.to}
+            end={item.to === "/"}
             className={({ isActive }) =>
-              `text-sm transition-colors duration-200 ${
-                isActive
-                  ? "text-violet-300"
-                  : "text-neutral-400 hover:text-violet-300"
+              `transition-colors duration-200 hover:text-accent ${
+                isActive ? "text-accent" : "text-fg"
               }`
             }
           >
-            About
+            <span className="hidden text-gray-600 sm:inline">[{item.key}] </span>
+            {item.label}
           </NavLink>
-
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `text-sm transition-colors duration-200 ${
-                isActive
-                  ? "text-violet-300"
-                  : "text-neutral-400 hover:text-violet-300"
-              }`
-            }
-          >
-            Projects
-          </NavLink>
-
-          <span className="w-px h-4 bg-neutral-700" />
-
-          <a
-            href="https://github.com/dano796"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg text-neutral-500 hover:text-violet-300 transition-colors duration-200"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/daniel-ortiza/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg text-neutral-500 hover:text-violet-300 transition-colors duration-200"
-          >
-            <FaLinkedin />
-          </a>
-        </div>
+        ))}
       </div>
+
+      <LocalStatus />
     </nav>
   );
 };
