@@ -26,7 +26,7 @@ export const BIO = `i'm a 20 y/o cs undergrad student working across software de
 
 /** Google Drive share link. `/view` is the page URL; `/preview` is the iframe embed URL. */
 export const CV_URL =
-  "https://drive.google.com/file/d/1n5urswkG7qNEiIJX9unNdRZSwshQGR3f/view";
+  "https://drive.google.com/file/d/1y5GrCHi_55zBudFX4XvNnIIOerGBKAvD/view";
 
 export const EMAIL = "ortizdaniel796@gmail.com";
 export const GITHUB_URL = "https://github.com/dano796";
