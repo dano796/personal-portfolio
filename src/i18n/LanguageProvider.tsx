@@ -23,7 +23,7 @@ const initialLanguage = (): Language => {
     // Private mode or blocked storage: fall through to the browser preference.
   }
 
-  return navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+  return navigator.language.toLowerCase().startsWith("en") ? "es" : "en";
 };
 
 const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
