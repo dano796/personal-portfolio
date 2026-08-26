@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { LOCATION } from "../constants";
+import { useLanguage } from "../i18n/context";
+import { UI } from "../i18n/ui";
 
 const timeFormatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: LOCATION.timeZone,
@@ -21,6 +23,7 @@ const msUntilNextMinute = () => 60_000 - (Date.now() % 60_000);
 
 /** Local time and temperature in Medellín, shown at the right of the navbar. */
 const LocalStatus: React.FC = () => {
+  const { t } = useLanguage();
   const [time, setTime] = useState(() => timeFormatter.format(new Date()));
   const [temperature, setTemperature] = useState<number | null>(null);
 
@@ -65,7 +68,7 @@ const LocalStatus: React.FC = () => {
       // shift sideways when the fetch resolves. It shrinks on mobile, where the
       // four nav links plus this readout only just fit on one line.
       className="min-w-[6rem] shrink-0 text-right text-[0.8125rem] tabular-nums text-gray-500 sm:min-w-[6.5rem] sm:text-sm"
-      title="local time and temperature in Medellín"
+      title={t(UI.localStatus.title)}
     >
       {time}
       {temperature !== null && ` · ${temperature}°C`}
