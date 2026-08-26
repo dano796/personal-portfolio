@@ -26,10 +26,11 @@ const Background: React.FC = () => {
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 opacity-60">
       <AmbientMesh
         nodeCount={40}
-        connectionDistance={300}
-        motionSpeed={0.2}
-        edgeOpacity={0.5}
-        nodeGlow={0.4}
+        connectionDistance={400}
+        motionSpeed={0.3}
+        edgeOpacity={0.6}
+        nodeSize={5}
+        nodeGlow={0.5}
         bgOpacity={1}
         bgColor="#141414"
         nodeColor="#d35f35"
